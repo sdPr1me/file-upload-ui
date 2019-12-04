@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script
+      class="jsbin"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="file-upload">
+      <div class="image-upload-wrap">
+        <input
+          class="file-upload-input"
+          type="file"
+          onchange="readURL(this);"
+          accept="image/*"
+        />
+        <div class="drag-text">
+          <h3>Drag and drop a file or click here to add a image</h3>
+        </div>
+      </div>
+      <div class="file-upload-content">
+        <img
+          class="file-upload-image"
+          src="#"
+          alt="your image"
+          id="uploaded-image"
+        />
+        <div class="image-title-wrap">
+          <button type="button" onclick="removeUpload()" class="remove-image">
+            Remove <span class="image-title">Uploaded Image</span>
+          </button>
+        </div>
+      </div>
+      <button class="file-upload-btn" type="button" onclick="uploadImage()">
+        Upload Image
+      </button>
+    </div>
+    <div class="file-upload" style="height: 200px;">
+      <h3 style="text-align:center">Extracted Date</h3>
+      <h5 style="text-align:center" id="result"></h5>
+    </div>
+  </body>
+</html>
